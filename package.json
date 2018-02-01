@@ -1,0 +1,15 @@
+{
+  "name": "ejswebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "package": "npm install && zip -9 -r package.zip *",
+    "deploy": "npm run package && aws lambda update-function-code --function-name ejsWebsite --zip-file fileb://package.zip"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7"
+  }
+}
